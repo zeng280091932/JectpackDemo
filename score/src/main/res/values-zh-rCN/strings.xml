@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">计分</string>
+    <string name="team_a">A队</string>
+    <string name="team_b">B队</string>
+</resources>

@@ -40,9 +40,9 @@ public abstract class WordDatabase extends RoomDatabase {
         @Override
         public void migrate(@NonNull SupportSQLiteDatabase database) {
             database.execSQL("CREATE TABLE word_temp (id INTEGER PRIMARY KEY NOT NULL ,english_word TEXT," +
-                    "chinese_meaning TEXT)");
-            database.execSQL("INSERT INTO word_temp (id,english_word,chinese_meaning) " +
-                    "SELECT id,english_word,chinese_meaning FROM word");
+                    "chinese_mean TEXT)");
+            database.execSQL("INSERT INTO word_temp (id,english_word,chinese_mean) " +
+                    "SELECT id,english_word,chinese_mean FROM word");
             database.execSQL("DROP TABLE word");
             database.execSQL("ALTER TABLE word_temp RENAME to word");
         }
